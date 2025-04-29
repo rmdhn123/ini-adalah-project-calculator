@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Tulisan berwarna</title>
+        <script language="Javascript">
+            function jumlah() {
+                // Ambil nilai dari input form
+                var nilai1 = parseFloat(document.formJml.nilaisatu.value);
+                var nilai2 = parseFloat(document.formJml.nilaidua.value);
+                
+                // Jumlahkan nilai
+                var hasil = nilai1 + nilai2;
+                
+                // Tampilkan hasil
+                alert("Hasil penjumlahan: " + hasil);
+                
+                // Mencegah form submit (agar tidak reload halaman)
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <script language="Javascript">
+            // Menampilkan tulisan berwarna merah
+            document.write("<font color='red'> semangat pagi</font>");
+            window.alert("selamat pagi salam bahagia");
+            var jawaban = window.confirm("apakah anda ingin melanjutkan?");
+            document.write("<br/>Jawaban anda: " + jawaban);
+            
+            // script ini menanyakan kepada pengunjung
+            var pengunjung = prompt("masukan nama anda", "Ya Disini");
+            document.write("<br /> Hai " + pengunjung + " Bagaimana kabarnya");
+        </script>
+        
+        <form name="formJml" onsubmit="return jumlah()">
+            masukan bilangan ke-1: <br>
+            <input type="text" name="nilaisatu"> <br>
+            masukan bilangan ke-2: <br> 
+            <input type="text" name="nilaidua"> <br>
+            tekan tombol ini untuk menjumlahkan <br>
+            <input type="submit" value="Hitung">
+        </form>
+    </body>
+</html>
